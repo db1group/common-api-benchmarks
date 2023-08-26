@@ -11,3 +11,4 @@ Port list:
 | Ktor      |  8050       |
 | Spring    | 8060        |
 | Py Flask  | 8070        |
+| Py Django | 8000        |
