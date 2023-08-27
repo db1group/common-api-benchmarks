@@ -106,3 +106,12 @@ services:
       resources:
         limits:
           memory: 1G
+  python-django-api:
+    container_name: python-djang-api
+    build: ./python-django-api
+    ports:
+      - 8000:8000
+    deploy:
+      resources:
+        limits:
+          memory: 1G
