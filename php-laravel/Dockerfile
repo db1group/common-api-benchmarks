@@ -3,12 +3,11 @@ FROM composer:2.2 AS build
 
 WORKDIR /app
 
-COPY . .
-RUN php artisan package:discover
-
 COPY composer.* ./
-RUN composer install --no-dev --optimize-autoloader --prefer-dist
+COPY . .
 
+RUN php artisan package:discover
+RUN composer install --no-dev --optimize-autoloader --prefer-dist
 RUN php artisan optimize:clear
 
 FROM php:8.2.7-fpm
